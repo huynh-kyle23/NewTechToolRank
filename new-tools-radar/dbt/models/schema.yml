@@ -1,0 +1,38 @@
+version: 2
+
+sources:
+  - name: public
+    schema: "{{ env_var('SUPABASE_DB_SCHEMA', 'public') }}"
+    tables:
+      - name: raw_tools
+
+models:
+  - name: stg_tools
+    description: "Staging model for raw ingested tools records."
+    columns:
+      - name: tool_id
+        tests:
+          - not_null
+      - name: source
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["product_hunt", "hackernews", "github"]
+
+  - name: int_tools_clean
+    description: "Deduplicated and labeled tools model."
+    columns:
+      - name: tool_id
+        tests:
+          - not_null
+      - name: momentum_label
+        tests:
+          - accepted_values:
+              values: ["hot", "rising", "new"]
+
+  - name: fct_trending_tools
+    description: "Daily source-level trend aggregates."
+    columns:
+      - name: source
+        tests:
+          - not_null

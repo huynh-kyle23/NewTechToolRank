@@ -1,0 +1,14 @@
+new_tools_radar:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('SUPABASE_DB_HOST', 'db.supabase.co') }}"
+      port: "{{ env_var('SUPABASE_DB_PORT', '5432') | int }}"
+      user: "{{ env_var('SUPABASE_DB_USER', 'postgres') }}"
+      password: "{{ env_var('SUPABASE_DB_PASSWORD', '') }}"
+      dbname: "{{ env_var('SUPABASE_DB_NAME', 'postgres') }}"
+      schema: "{{ env_var('SUPABASE_DB_SCHEMA', 'public') }}"
+      threads: 4
+      keepalives_idle: 0
+      sslmode: require
