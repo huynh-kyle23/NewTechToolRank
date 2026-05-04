@@ -89,6 +89,9 @@ def load_to_supabase(records: List[Dict[str, Any]]) -> int:
     """
     Bulk load normalized records into Supabase Postgres raw_tools table.
 
+    Uses ``ON CONFLICT (id, source) DO NOTHING``: rows that already exist for the same
+    primary key are skipped so a daily pull does not overwrite or duplicate existing rows.
+
     Requires SUPABASE_DB_URL in environment.
     """
     if not records:
@@ -102,14 +105,7 @@ def load_to_supabase(records: List[Dict[str, Any]]) -> int:
     query = """
         INSERT INTO raw_tools (id, name, source, description, url, score, created_at, ingested_at)
         VALUES (%(id)s, %(name)s, %(source)s, %(description)s, %(url)s, %(score)s, %(created_at)s, NOW())
-        ON CONFLICT (id, source) DO UPDATE
-        SET
-            name = EXCLUDED.name,
-            description = EXCLUDED.description,
-            url = EXCLUDED.url,
-            score = EXCLUDED.score,
-            created_at = EXCLUDED.created_at,
-            ingested_at = NOW();
+        ON CONFLICT (id, source) DO NOTHING;
     """
 
     with psycopg2.connect(db_url) as conn:
@@ -117,5 +113,43 @@ def load_to_supabase(records: List[Dict[str, Any]]) -> int:
             execute_batch(cur, query, records, page_size=100)
         conn.commit()
 
-    LOGGER.info("Loaded %s records into raw_tools", len(records))
+    LOGGER.info(
+        "Finished insert batch for %s raw_tools rows (existing id+source pairs skipped via DO NOTHING)",
+        len(records),
+    )
     return len(records)
+
+
+def purge_stale_raw_tools(retention_days: int | None = None) -> int:
+    """
+    Delete ``raw_tools`` rows whose ``ingested_at`` is older than ``retention_days``.
+
+    Default retention is 30 days, overridable with env ``RAW_TOOLS_RETENTION_DAYS``.
+    """
+    db_url = os.getenv("SUPABASE_DB_URL")
+    if not db_url:
+        raise ValueError("SUPABASE_DB_URL is required but not set.")
+
+    days = retention_days
+    if days is None:
+        raw = os.getenv("RAW_TOOLS_RETENTION_DAYS", "30")
+        try:
+            days = int(raw)
+        except ValueError as exc:
+            raise ValueError(f"RAW_TOOLS_RETENTION_DAYS must be an integer, got {raw!r}") from exc
+    if days < 1:
+        raise ValueError("retention_days must be >= 1")
+
+    delete_sql = """
+        DELETE FROM raw_tools
+        WHERE ingested_at < NOW() - (%s * INTERVAL '1 day');
+    """
+
+    with psycopg2.connect(db_url) as conn:
+        with conn.cursor() as cur:
+            cur.execute(delete_sql, (days,))
+            deleted = cur.rowcount
+        conn.commit()
+
+    LOGGER.info("Purged %s raw_tools rows older than %s day(s) by ingested_at", deleted, days)
+    return int(deleted or 0)

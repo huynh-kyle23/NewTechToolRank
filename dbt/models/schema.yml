@@ -17,18 +17,34 @@ models:
         tests:
           - not_null
           - accepted_values:
-              values: ["product_hunt", "hackernews", "github"]
+              arguments:
+                values: ["product_hunt", "hackernews", "github"]
 
   - name: int_tools_clean
-    description: "Deduplicated and labeled tools model."
+    description: >
+      Deduplicated tools with momentum labels plus heuristic enrichment: pull timestamp,
+      data vs non-data, and practice-area bucket (keyword-based; tune patterns over time).
     columns:
       - name: tool_id
         tests:
           - not_null
+      - name: data_pulled_at
+        tests:
+          - not_null
+      - name: data_pulled_date
+        tests:
+          - not_null
+      - name: tool_domain
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["data_tool", "non_data_tool"]
       - name: momentum_label
         tests:
           - accepted_values:
-              values: ["hot", "rising", "new"]
+              arguments:
+                values: ["hot", "rising", "new"]
 
   - name: fct_trending_tools
     description: "Daily source-level trend aggregates."
@@ -36,3 +52,16 @@ models:
       - name: source
         tests:
           - not_null
+
+  - name: fct_tool_intel_daily
+    description: "Daily counts by pull date, data vs non-data, and practice category."
+    columns:
+      - name: pull_date
+        tests:
+          - not_null
+      - name: tool_domain
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["data_tool", "non_data_tool"]

@@ -7,8 +7,9 @@ Production-style local data engineering project that ingests emerging tools from
 The pipeline runs once per day and performs:
 1. API extraction from Product Hunt, Hacker News, and GitHub.
 2. Record normalization into one canonical schema.
-3. Upsert into `public.raw_tools` on Supabase.
-4. dbt `run` and `test` for staged, cleaned, and mart layers.
+3. Insert into `public.raw_tools` on Supabase using **`ON CONFLICT DO NOTHING`**, so rows whose `(id, source)` already exist are **not** re-added or updated on that pull.
+4. **Retention purge**: delete `raw_tools` rows whose **`ingested_at`** is older than **30 days** (configurable via `RAW_TOOLS_RETENTION_DAYS`) so the raw layer does not grow without bound.
+5. dbt `run` and `test` for staged, cleaned, and mart layers.
 
 Everything is designed for free-tier usage and local-first development.
 
@@ -69,7 +70,8 @@ NewTechToolRank/
 │       ├── intermediate/
 │       │   └── int_tools_clean.sql
 │       ├── marts/
-│       │   └── fct_trending_tools.sql
+│       │   ├── fct_trending_tools.sql
+│       │   └── fct_tool_intel_daily.sql
 │       └── schema.yml
 ├── supabase/
 │   └── schema.sql
@@ -99,6 +101,7 @@ Then update values in `.env`:
 - `PRODUCT_HUNT_TOKEN`
 - `GITHUB_TOKEN`
 - optional `SUPABASE_DB_*` vars for dbt profile
+- optional `RAW_TOOLS_RETENTION_DAYS` (default **30**) — how many days of `raw_tools` history to keep by `ingested_at` before the DAG purge step deletes older rows
 
 ### 3) Create Raw Schema in Supabase
 
@@ -143,7 +146,7 @@ docker compose exec scheduler airflow dags trigger new_tools_radar
 
 Then in Airflow UI (`http://localhost:8080`):
 1. Open DAG `new_tools_radar`.
-2. Confirm all tasks go green (`fetch_sources`, `normalize_records`, `load_raw_tools`, `run_dbt`).
+2. Confirm all tasks go green (`fetch_sources`, `normalize_records`, `load_raw_tools`, `purge_old_raw_tools`, `run_dbt`).
 3. If a task is yellow (`up_for_retry`), open task logs and fix the root error.
 
 ### Re-run after changing dependencies / Dockerfile / requirements
@@ -172,13 +175,20 @@ docker compose exec scheduler airflow dags trigger new_tools_radar
 
 ## dbt Models
 
-- `stg_tools`: clean typecasts + source normalization.
-- `int_tools_clean`: dedupe by `(source, tool_id)` and add momentum labels.
-- `fct_trending_tools`: daily source-level aggregates and ranking.
+- `stg_tools`: clean typecasts + source normalization (includes `ingested_at` from ingestion, i.e. when the row landed in `raw_tools`).
+- `int_tools_clean`: dedupe by `(source, tool_id)` and add:
+  - **Pull time**: `data_pulled_at` (timestamp) and `data_pulled_date` (date) copied from `ingested_at`, so every mart row knows which ingest batch it came from.
+  - **Data vs non-data**: `tool_domain` is `data_tool` vs `non_data_tool` using keyword signals in the combined name + description text (case-insensitive `LIKE` patterns).
+  - **Practice area** (data tools only): `data_practice_category` buckets into `ai`, `machine_learning`, `dbms`, `data_visualization`, `data_modeling`, or `other_data` when the text looks broadly “data/analytics/ETL” but does not match a specific bucket. For `non_data_tool`, `data_practice_category` is **null**.
+  - **Momentum**: `momentum_label` (`hot` / `rising` / `new`) from score thresholds.
+- `fct_trending_tools`: daily source-level aggregates and ranking (unchanged grain).
+- `fct_tool_intel_daily`: daily aggregates by **`data_pulled_date`**, **`tool_domain`**, and **`data_practice_category`** so you can see mix of data vs non-data tools per pull day.
+
+These classifications are **heuristic**, not ground truth. Extend the keyword lists in `int_tools_clean.sql` as you learn false positives/negatives, or later swap in a taxonomy table or ML classifier.
 
 Included dbt tests:
-- `not_null` on key columns.
-- `accepted_values` on `source` and `momentum_label`.
+- `not_null` on key columns (including new enrichment fields where always populated).
+- `accepted_values` on `source`, `tool_domain`, and `momentum_label` (generic tests use the `arguments` block for dbt 1.11+).
 
 ## Example Queries
 
@@ -199,6 +209,19 @@ from public.int_tools_clean
 where momentum_label in ('hot', 'rising')
 order by score desc, created_at desc
 limit 25;
+```
+
+Mix of data vs non-data tools for the latest pull day:
+
+```sql
+select
+  tool_domain,
+  data_practice_category,
+  tools_count,
+  avg_score
+from public.fct_tool_intel_daily
+where pull_date = (select max(data_pulled_date) from public.int_tools_clean)
+order by tools_count desc;
 ```
 
 ## Free-Tier Compatibility Notes
