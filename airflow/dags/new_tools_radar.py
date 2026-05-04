@@ -22,7 +22,12 @@ if str(PROJECT_ROOT) not in sys.path:
 from ingestion.github import fetch_github_tools
 from ingestion.hackernews import fetch_hackernews_tools
 from ingestion.product_hunt import fetch_product_hunt_tools
-from ingestion.utils import load_to_supabase, normalize_records as normalize_records_batch, setup_logging
+from ingestion.utils import (
+    load_to_supabase,
+    normalize_records as normalize_records_batch,
+    purge_stale_raw_tools as purge_stale_raw_tools_fn,
+    setup_logging,
+)
 
 
 def _fetch_all_sources(**context: Dict) -> None:
@@ -51,6 +56,12 @@ def _load_to_supabase(**context: Dict) -> None:
     setup_logging()
     records = json.loads(context["ti"].xcom_pull(task_ids="normalize_records", key="normalized_records"))
     load_to_supabase(records)
+
+
+def _purge_stale_raw_tools(**_: Dict) -> None:
+    """Remove raw rows past retention so the warehouse does not grow forever."""
+    setup_logging()
+    purge_stale_raw_tools_fn()
 
 
 default_args = {
@@ -84,6 +95,11 @@ with DAG(
         python_callable=_load_to_supabase,
     )
 
+    purge_old_raw = PythonOperator(
+        task_id="purge_old_raw_tools",
+        python_callable=_purge_stale_raw_tools,
+    )
+
     # BashOperator defaults to append_env=False: a custom `env` would *replace* the process
     # environment, dropping PATH and all SUPABASE_DB_* from Docker `env_file`. dbt would fail.
     dbt_run = BashOperator(
@@ -101,4 +117,4 @@ with DAG(
         ),
     )
 
-    fetch_sources >> normalize_records_task >> load_raw_tools >> dbt_run
+    fetch_sources >> normalize_records_task >> load_raw_tools >> purge_old_raw >> dbt_run
