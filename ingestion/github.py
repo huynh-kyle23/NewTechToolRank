@@ -6,7 +6,7 @@ import os
 from datetime import datetime, timedelta, timezone
 from typing import Any, Dict, List
 
-from utils import LOGGER, get_retry_session
+from ingestion.utils import LOGGER, get_retry_session
 
 
 GITHUB_SEARCH_URL = "https://api.github.com/search/repositories"

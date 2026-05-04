@@ -5,7 +5,7 @@ from __future__ import annotations
 import os
 from typing import Any, Dict, List
 
-from utils import LOGGER, get_retry_session
+from ingestion.utils import LOGGER, get_retry_session
 
 
 PRODUCT_HUNT_API_URL = "https://api.producthunt.com/v2/api/graphql"

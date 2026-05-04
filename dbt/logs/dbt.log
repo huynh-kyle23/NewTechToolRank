@@ -742,3 +742,1491 @@ where source is null
 [0m18:51:38.952303 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106fc4620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105bc1250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10495d430>]}
 [0m18:51:38.952546 [debug] [MainThread]: Flushing usage events
 [0m18:51:39.296106 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:24:45.232293 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9f40fdd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9d47c470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9c967b00>]}
+
+
+============================== 08:24:45.242227 | 9887128e-f102-4e53-8108-c6eba6f54e27 ==============================
+[0m08:24:45.242227 [info ] [MainThread]: Running with dbt=1.11.8
+[0m08:24:45.242618 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'quiet': 'False', 'version_check': 'True', 'log_format': 'default', 'introspect': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt deps', 'printer_width': '80', 'empty': 'None', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'write_json': 'True', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'fail_fast': 'False', 'log_path': '/opt/project/dbt/logs', 'indirect_selection': 'eager', 'profiles_dir': '/opt/project/dbt', 'target_path': 'None'}
+[0m08:24:45.716852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9887128e-f102-4e53-8108-c6eba6f54e27', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9d98d7f0>]}
+[0m08:24:45.770262 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m08:24:45.778991 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m08:24:45.791097 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.5916135, "process_in_blocks": "7296", "process_kernel_time": 5.083069, "process_mem_max_rss": "106956", "process_out_blocks": "1907", "process_user_time": 1.903228}
+[0m08:24:45.792164 [debug] [MainThread]: Command `dbt deps` succeeded at 08:24:45.792054 after 0.59 seconds
+[0m08:24:45.793382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9d3fb0b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9c580fe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9c56e480>]}
+[0m08:24:45.793649 [debug] [MainThread]: Flushing usage events
+[0m08:24:46.521346 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:24:49.553888 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb50c1370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb4384710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb7012f00>]}
+
+
+============================== 08:24:49.559832 | 230e9ac1-86c0-49c5-bd67-e5d3afbda736 ==============================
+[0m08:24:49.559832 [info ] [MainThread]: Running with dbt=1.11.8
+[0m08:24:49.560421 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'version_check': 'True', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run --profiles-dir /opt/project/dbt --target dev', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'target_path': 'None', 'log_path': '/opt/project/dbt/logs', 'empty': 'False', 'printer_width': '80', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'fail_fast': 'False', 'profiles_dir': '/opt/project/dbt', 'indirect_selection': 'eager', 'log_format': 'default', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'write_json': 'True'}
+[0m08:24:49.736268 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '230e9ac1-86c0-49c5-bd67-e5d3afbda736', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb43de270>]}
+[0m08:24:49.793762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '230e9ac1-86c0-49c5-bd67-e5d3afbda736', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb38a4470>]}
+[0m08:24:49.794880 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m08:24:49.915977 [debug] [MainThread]: checksum: 205f67941a37c44b34a8b709ae683ccb08f2061b4926cd29bbf893726d03834e, vars: {}, profile: , target: dev, version: 1.11.8
+[0m08:24:50.283015 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m08:24:50.283998 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m08:24:50.284346 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m08:24:50.314044 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '230e9ac1-86c0-49c5-bd67-e5d3afbda736', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb387dcd0>]}
+[0m08:24:50.410975 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/project/dbt/target/manifest.json
+[0m08:24:50.414899 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/project/dbt/target/semantic_manifest.json
+[0m08:24:50.436737 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '230e9ac1-86c0-49c5-bd67-e5d3afbda736', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb33dcce0>]}
+[0m08:24:50.437227 [info ] [MainThread]: Found 3 models, 6 data tests, 1 source, 465 macros
+[0m08:24:50.437574 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '230e9ac1-86c0-49c5-bd67-e5d3afbda736', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb3434aa0>]}
+[0m08:24:50.439450 [info ] [MainThread]: 
+[0m08:24:50.439977 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m08:24:50.440250 [info ] [MainThread]: 
+[0m08:24:50.440777 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m08:24:50.443953 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m08:24:50.529052 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m08:24:50.529454 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m08:24:50.529804 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:24:51.286189 [debug] [ThreadPool]: SQL status: SELECT 22 in 0.727 seconds
+[0m08:24:51.297623 [debug] [ThreadPool]: On list_postgres: Close
+[0m08:24:51.312712 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now list_postgres_public)
+[0m08:24:51.329429 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m08:24:51.330016 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m08:24:51.330300 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:24:51.893203 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.561 seconds
+[0m08:24:51.912400 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m08:24:51.980700 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m08:24:52.019668 [debug] [MainThread]: Using postgres connection "master"
+[0m08:24:52.021170 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m08:24:52.023708 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:24:52.645321 [debug] [MainThread]: SQL status: SELECT 2 in 0.613 seconds
+[0m08:24:52.661787 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '230e9ac1-86c0-49c5-bd67-e5d3afbda736', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb33eb890>]}
+[0m08:24:52.663449 [debug] [MainThread]: On master: ROLLBACK
+[0m08:24:52.727991 [debug] [MainThread]: On master: COMMIT
+[0m08:24:52.728615 [debug] [MainThread]: Using postgres connection "master"
+[0m08:24:52.728893 [debug] [MainThread]: On master: COMMIT
+[0m08:24:52.859639 [debug] [MainThread]: SQL status: COMMIT in 0.130 seconds
+[0m08:24:52.860355 [debug] [MainThread]: On master: Close
+[0m08:24:52.879388 [debug] [Thread-1 (]: Began running node model.new_tools_radar.stg_tools
+[0m08:24:52.880545 [info ] [Thread-1 (]: 1 of 3 START sql view model public.stg_tools ................................... [RUN]
+[0m08:24:52.881259 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public, now model.new_tools_radar.stg_tools)
+[0m08:24:52.881652 [debug] [Thread-1 (]: Began compiling node model.new_tools_radar.stg_tools
+[0m08:24:52.899386 [debug] [Thread-1 (]: Writing injected SQL for node "model.new_tools_radar.stg_tools"
+[0m08:24:52.902455 [debug] [Thread-1 (]: Began executing node model.new_tools_radar.stg_tools
+[0m08:24:52.931029 [debug] [Thread-1 (]: Writing runtime sql for node "model.new_tools_radar.stg_tools"
+[0m08:24:52.938807 [debug] [Thread-1 (]: Using postgres connection "model.new_tools_radar.stg_tools"
+[0m08:24:52.939050 [debug] [Thread-1 (]: On model.new_tools_radar.stg_tools: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.stg_tools"} */
+
+  create view "postgres"."public"."stg_tools__dbt_tmp"
+    
+    
+  as (
+    with source_data as (
+    select
+        id::text as tool_id,
+        trim(name) as tool_name,
+        lower(trim(source)) as source,
+        nullif(trim(description), '') as description,
+        nullif(trim(url), '') as url,
+        coalesce(score, 0)::int as score,
+        created_at::timestamptz as created_at,
+        ingested_at::timestamptz as ingested_at
+    from "postgres"."public"."raw_tools"
+)
+
+select *
+from source_data
+where tool_id is not null
+  and tool_name is not null
+  and source is not null
+  );
+[0m08:24:52.939263 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:24:53.561440 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.620 seconds
+[0m08:24:53.609864 [debug] [Thread-1 (]: Using postgres connection "model.new_tools_radar.stg_tools"
+[0m08:24:53.614254 [debug] [Thread-1 (]: On model.new_tools_radar.stg_tools: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.stg_tools"} */
+alter table "postgres"."public"."stg_tools" rename to "stg_tools__dbt_backup"
+[0m08:24:53.691277 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.073 seconds
+[0m08:24:53.696459 [debug] [Thread-1 (]: Using postgres connection "model.new_tools_radar.stg_tools"
+[0m08:24:53.696840 [debug] [Thread-1 (]: On model.new_tools_radar.stg_tools: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.stg_tools"} */
+alter table "postgres"."public"."stg_tools__dbt_tmp" rename to "stg_tools"
+[0m08:24:53.763454 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.066 seconds
+[0m08:24:53.790355 [debug] [Thread-1 (]: On model.new_tools_radar.stg_tools: COMMIT
+[0m08:24:53.791852 [debug] [Thread-1 (]: Using postgres connection "model.new_tools_radar.stg_tools"
+[0m08:24:53.792534 [debug] [Thread-1 (]: On model.new_tools_radar.stg_tools: COMMIT
+[0m08:24:53.860828 [debug] [Thread-1 (]: SQL status: COMMIT in 0.068 seconds
+[0m08:24:53.865392 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."stg_tools__dbt_backup"
+[0m08:24:53.874194 [debug] [Thread-1 (]: Using postgres connection "model.new_tools_radar.stg_tools"
+[0m08:24:53.874934 [debug] [Thread-1 (]: On model.new_tools_radar.stg_tools: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.stg_tools"} */
+drop view if exists "postgres"."public"."stg_tools__dbt_backup" cascade
+[0m08:24:53.963030 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.087 seconds
+[0m08:24:53.968272 [debug] [Thread-1 (]: On model.new_tools_radar.stg_tools: Close
+[0m08:24:53.973708 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '230e9ac1-86c0-49c5-bd67-e5d3afbda736', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb57cd6d0>]}
+[0m08:24:53.975028 [info ] [Thread-1 (]: 1 of 3 OK created sql view model public.stg_tools .............................. [[32mCREATE VIEW[0m in 1.09s]
+[0m08:24:53.975699 [debug] [Thread-1 (]: Finished running node model.new_tools_radar.stg_tools
+[0m08:24:53.978028 [debug] [Thread-3 (]: Began running node model.new_tools_radar.int_tools_clean
+[0m08:24:53.979890 [info ] [Thread-3 (]: 2 of 3 START sql table model public.int_tools_clean ............................ [RUN]
+[0m08:24:53.981111 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.new_tools_radar.int_tools_clean'
+[0m08:24:53.981690 [debug] [Thread-3 (]: Began compiling node model.new_tools_radar.int_tools_clean
+[0m08:24:53.988301 [debug] [Thread-3 (]: Writing injected SQL for node "model.new_tools_radar.int_tools_clean"
+[0m08:24:53.989481 [debug] [Thread-3 (]: Began executing node model.new_tools_radar.int_tools_clean
+[0m08:24:54.014457 [debug] [Thread-3 (]: Writing runtime sql for node "model.new_tools_radar.int_tools_clean"
+[0m08:24:54.016951 [debug] [Thread-3 (]: Using postgres connection "model.new_tools_radar.int_tools_clean"
+[0m08:24:54.017208 [debug] [Thread-3 (]: On model.new_tools_radar.int_tools_clean: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.int_tools_clean"} */
+
+  
+    
+
+  create  table "postgres"."public"."int_tools_clean__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with ranked as (
+    select
+        tool_id,
+        tool_name,
+        source,
+        description,
+        url,
+        score,
+        created_at,
+        ingested_at,
+        row_number() over (
+            partition by source, tool_id
+            order by ingested_at desc
+        ) as rn
+    from "postgres"."public"."stg_tools"
+),
+deduped as (
+    select
+        tool_id,
+        tool_name,
+        source,
+        description,
+        url,
+        score,
+        created_at,
+        ingested_at
+    from ranked
+    where rn = 1
+)
+
+select
+    tool_id,
+    tool_name,
+    source,
+    description,
+    url,
+    score,
+    created_at,
+    ingested_at,
+    case
+        when score >= 500 then 'hot'
+        when score >= 100 then 'rising'
+        else 'new'
+    end as momentum_label
+from deduped
+  );
+  
+[0m08:24:54.017497 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m08:24:54.618193 [debug] [Thread-3 (]: SQL status: SELECT 81 in 0.595 seconds
+[0m08:24:54.664770 [debug] [Thread-3 (]: Using postgres connection "model.new_tools_radar.int_tools_clean"
+[0m08:24:54.667615 [debug] [Thread-3 (]: On model.new_tools_radar.int_tools_clean: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.int_tools_clean"} */
+alter table "postgres"."public"."int_tools_clean" rename to "int_tools_clean__dbt_backup"
+[0m08:24:54.735507 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.067 seconds
+[0m08:24:54.738658 [debug] [Thread-3 (]: Using postgres connection "model.new_tools_radar.int_tools_clean"
+[0m08:24:54.738983 [debug] [Thread-3 (]: On model.new_tools_radar.int_tools_clean: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.int_tools_clean"} */
+alter table "postgres"."public"."int_tools_clean__dbt_tmp" rename to "int_tools_clean"
+[0m08:24:54.807068 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.068 seconds
+[0m08:24:54.808486 [debug] [Thread-3 (]: On model.new_tools_radar.int_tools_clean: COMMIT
+[0m08:24:54.808811 [debug] [Thread-3 (]: Using postgres connection "model.new_tools_radar.int_tools_clean"
+[0m08:24:54.809085 [debug] [Thread-3 (]: On model.new_tools_radar.int_tools_clean: COMMIT
+[0m08:24:54.877537 [debug] [Thread-3 (]: SQL status: COMMIT in 0.068 seconds
+[0m08:24:54.879350 [debug] [Thread-3 (]: Applying DROP to: "postgres"."public"."int_tools_clean__dbt_backup"
+[0m08:24:54.881866 [debug] [Thread-3 (]: Using postgres connection "model.new_tools_radar.int_tools_clean"
+[0m08:24:54.882215 [debug] [Thread-3 (]: On model.new_tools_radar.int_tools_clean: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.int_tools_clean"} */
+drop table if exists "postgres"."public"."int_tools_clean__dbt_backup" cascade
+[0m08:24:54.951582 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.069 seconds
+[0m08:24:54.952963 [debug] [Thread-3 (]: On model.new_tools_radar.int_tools_clean: Close
+[0m08:24:54.955298 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '230e9ac1-86c0-49c5-bd67-e5d3afbda736', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb28107d0>]}
+[0m08:24:54.956333 [info ] [Thread-3 (]: 2 of 3 OK created sql table model public.int_tools_clean ....................... [[32mSELECT 81[0m in 0.97s]
+[0m08:24:54.957303 [debug] [Thread-3 (]: Finished running node model.new_tools_radar.int_tools_clean
+[0m08:24:54.963366 [debug] [Thread-2 (]: Began running node model.new_tools_radar.fct_trending_tools
+[0m08:24:54.964822 [info ] [Thread-2 (]: 3 of 3 START sql table model public.fct_trending_tools ......................... [RUN]
+[0m08:24:54.965513 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.new_tools_radar.fct_trending_tools'
+[0m08:24:54.965812 [debug] [Thread-2 (]: Began compiling node model.new_tools_radar.fct_trending_tools
+[0m08:24:54.972647 [debug] [Thread-2 (]: Writing injected SQL for node "model.new_tools_radar.fct_trending_tools"
+[0m08:24:54.974019 [debug] [Thread-2 (]: Began executing node model.new_tools_radar.fct_trending_tools
+[0m08:24:54.976881 [debug] [Thread-2 (]: Writing runtime sql for node "model.new_tools_radar.fct_trending_tools"
+[0m08:24:54.978768 [debug] [Thread-2 (]: Using postgres connection "model.new_tools_radar.fct_trending_tools"
+[0m08:24:54.979048 [debug] [Thread-2 (]: On model.new_tools_radar.fct_trending_tools: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.fct_trending_tools"} */
+
+  
+    
+
+  create  table "postgres"."public"."fct_trending_tools__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with base as (
+    select *
+    from "postgres"."public"."int_tools_clean"
+),
+aggregated as (
+    select
+        source,
+        date_trunc('day', created_at) as created_day,
+        count(*) as tools_count,
+        avg(score)::numeric(10, 2) as avg_score,
+        max(score) as max_score
+    from base
+    group by 1, 2
+)
+
+select
+    source,
+    created_day,
+    tools_count,
+    avg_score,
+    max_score,
+    rank() over (partition by created_day order by avg_score desc) as source_rank_for_day
+from aggregated
+  );
+  
+[0m08:24:54.979346 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m08:24:55.563210 [debug] [Thread-2 (]: SQL status: SELECT 24 in 0.582 seconds
+[0m08:24:55.589003 [debug] [Thread-2 (]: Using postgres connection "model.new_tools_radar.fct_trending_tools"
+[0m08:24:55.589516 [debug] [Thread-2 (]: On model.new_tools_radar.fct_trending_tools: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.fct_trending_tools"} */
+alter table "postgres"."public"."fct_trending_tools" rename to "fct_trending_tools__dbt_backup"
+[0m08:24:55.657146 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.067 seconds
+[0m08:24:55.659869 [debug] [Thread-2 (]: Using postgres connection "model.new_tools_radar.fct_trending_tools"
+[0m08:24:55.660159 [debug] [Thread-2 (]: On model.new_tools_radar.fct_trending_tools: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.fct_trending_tools"} */
+alter table "postgres"."public"."fct_trending_tools__dbt_tmp" rename to "fct_trending_tools"
+[0m08:24:55.730477 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.070 seconds
+[0m08:24:55.738568 [debug] [Thread-2 (]: On model.new_tools_radar.fct_trending_tools: COMMIT
+[0m08:24:55.739062 [debug] [Thread-2 (]: Using postgres connection "model.new_tools_radar.fct_trending_tools"
+[0m08:24:55.742265 [debug] [Thread-2 (]: On model.new_tools_radar.fct_trending_tools: COMMIT
+[0m08:24:55.812016 [debug] [Thread-2 (]: SQL status: COMMIT in 0.066 seconds
+[0m08:24:55.816594 [debug] [Thread-2 (]: Applying DROP to: "postgres"."public"."fct_trending_tools__dbt_backup"
+[0m08:24:55.825990 [debug] [Thread-2 (]: Using postgres connection "model.new_tools_radar.fct_trending_tools"
+[0m08:24:55.834151 [debug] [Thread-2 (]: On model.new_tools_radar.fct_trending_tools: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.fct_trending_tools"} */
+drop table if exists "postgres"."public"."fct_trending_tools__dbt_backup" cascade
+[0m08:24:55.901017 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.066 seconds
+[0m08:24:55.902436 [debug] [Thread-2 (]: On model.new_tools_radar.fct_trending_tools: Close
+[0m08:24:55.904287 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '230e9ac1-86c0-49c5-bd67-e5d3afbda736', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb27c7f50>]}
+[0m08:24:55.905207 [info ] [Thread-2 (]: 3 of 3 OK created sql table model public.fct_trending_tools .................... [[32mSELECT 24[0m in 0.94s]
+[0m08:24:55.905910 [debug] [Thread-2 (]: Finished running node model.new_tools_radar.fct_trending_tools
+[0m08:24:55.916573 [debug] [MainThread]: On master: COMMIT
+[0m08:24:55.917154 [debug] [MainThread]: Using postgres connection "master"
+[0m08:24:55.917461 [debug] [MainThread]: On master: COMMIT
+[0m08:24:55.918044 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m08:24:56.504339 [debug] [MainThread]: SQL status: COMMIT in 0.583 seconds
+[0m08:24:56.508172 [debug] [MainThread]: On master: Close
+[0m08:24:56.510831 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:24:56.511165 [debug] [MainThread]: Connection 'model.new_tools_radar.stg_tools' was properly closed.
+[0m08:24:56.511393 [debug] [MainThread]: Connection 'model.new_tools_radar.int_tools_clean' was properly closed.
+[0m08:24:56.511631 [debug] [MainThread]: Connection 'model.new_tools_radar.fct_trending_tools' was properly closed.
+[0m08:24:56.520978 [info ] [MainThread]: 
+[0m08:24:56.522126 [info ] [MainThread]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 6.07 seconds (6.07s).
+[0m08:24:56.525573 [debug] [MainThread]: Command end result
+[0m08:24:56.594632 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/project/dbt/target/manifest.json
+[0m08:24:56.623547 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/project/dbt/target/semantic_manifest.json
+[0m08:24:56.644389 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/project/dbt/target/run_results.json
+[0m08:24:56.644735 [info ] [MainThread]: 
+[0m08:24:56.645122 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m08:24:56.645346 [info ] [MainThread]: 
+[0m08:24:56.645704 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m08:24:56.654873 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 7.108404, "process_in_blocks": "13976", "process_kernel_time": 1.241734, "process_mem_max_rss": "127592", "process_out_blocks": "2048", "process_user_time": 2.782768}
+[0m08:24:56.659704 [debug] [MainThread]: Command `dbt run` succeeded at 08:24:56.659362 after 7.11 seconds
+[0m08:24:56.661344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb28dfce0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb57fe3f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb4535100>]}
+[0m08:24:56.661805 [debug] [MainThread]: Flushing usage events
+[0m08:24:57.076207 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:24:59.280664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffae69c500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac6d94f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac6d9760>]}
+
+
+============================== 08:24:59.287216 | 7b1c70a4-0d1b-4523-9a88-4d332e434b20 ==============================
+[0m08:24:59.287216 [info ] [MainThread]: Running with dbt=1.11.8
+[0m08:24:59.287685 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'version_check': 'True', 'write_json': 'True', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'empty': 'None', 'cache_selected_only': 'False', 'no_print': 'None', 'static_parser': 'True', 'invocation_command': 'dbt test --profiles-dir /opt/project/dbt --target dev', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'quiet': 'False', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'log_cache_events': 'False', 'target_path': 'None', 'indirect_selection': 'eager', 'warn_error': 'None', 'log_path': '/opt/project/dbt/logs', 'use_experimental_parser': 'False', 'use_colors': 'True', 'profiles_dir': '/opt/project/dbt'}
+[0m08:24:59.454856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7b1c70a4-0d1b-4523-9a88-4d332e434b20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac8e9130>]}
+[0m08:24:59.484915 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7b1c70a4-0d1b-4523-9a88-4d332e434b20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac321190>]}
+[0m08:24:59.510234 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m08:24:59.569561 [debug] [MainThread]: checksum: 205f67941a37c44b34a8b709ae683ccb08f2061b4926cd29bbf893726d03834e, vars: {}, profile: , target: dev, version: 1.11.8
+[0m08:24:59.665725 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m08:24:59.666319 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m08:24:59.666618 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m08:24:59.691316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7b1c70a4-0d1b-4523-9a88-4d332e434b20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaaacfb90>]}
+[0m08:24:59.742327 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/project/dbt/target/manifest.json
+[0m08:24:59.744322 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/project/dbt/target/semantic_manifest.json
+[0m08:24:59.768423 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7b1c70a4-0d1b-4523-9a88-4d332e434b20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaa50a780>]}
+[0m08:24:59.769225 [info ] [MainThread]: Found 3 models, 6 data tests, 1 source, 465 macros
+[0m08:24:59.769573 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7b1c70a4-0d1b-4523-9a88-4d332e434b20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaa64bda0>]}
+[0m08:24:59.772106 [info ] [MainThread]: 
+[0m08:24:59.772956 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m08:24:59.773198 [info ] [MainThread]: 
+[0m08:24:59.773685 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m08:24:59.776279 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres_public'
+[0m08:24:59.830220 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m08:24:59.830739 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m08:24:59.830988 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:25:00.468390 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.629 seconds
+[0m08:25:00.483557 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m08:25:00.555898 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m08:25:00.572840 [debug] [MainThread]: Using postgres connection "master"
+[0m08:25:00.573634 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m08:25:00.574075 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:25:01.191385 [debug] [MainThread]: SQL status: SELECT 2 in 0.616 seconds
+[0m08:25:01.201180 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7b1c70a4-0d1b-4523-9a88-4d332e434b20', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaa53c0b0>]}
+[0m08:25:01.205327 [debug] [MainThread]: On master: ROLLBACK
+[0m08:25:01.271485 [debug] [MainThread]: On master: COMMIT
+[0m08:25:01.273735 [debug] [MainThread]: Using postgres connection "master"
+[0m08:25:01.274330 [debug] [MainThread]: On master: COMMIT
+[0m08:25:01.410047 [debug] [MainThread]: SQL status: COMMIT in 0.135 seconds
+[0m08:25:01.410667 [debug] [MainThread]: On master: Close
+[0m08:25:01.455273 [debug] [Thread-1 (]: Began running node test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256
+[0m08:25:01.456926 [debug] [Thread-2 (]: Began running node test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79
+[0m08:25:01.457721 [debug] [Thread-3 (]: Began running node test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b
+[0m08:25:01.458689 [debug] [Thread-4 (]: Began running node test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482
+[0m08:25:01.460359 [info ] [Thread-1 (]: 1 of 6 START test accepted_values_int_tools_clean_momentum_label__hot__rising__new  [RUN]
+[0m08:25:01.462100 [info ] [Thread-2 (]: 2 of 6 START test accepted_values_stg_tools_source__product_hunt__hackernews__github  [RUN]
+[0m08:25:01.465669 [info ] [Thread-3 (]: 3 of 6 START test not_null_fct_trending_tools_source ........................... [RUN]
+[0m08:25:01.477914 [info ] [Thread-4 (]: 4 of 6 START test not_null_int_tools_clean_tool_id ............................. [RUN]
+[0m08:25:01.487036 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public, now test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256)
+[0m08:25:01.500637 [debug] [Thread-2 (]: Acquiring new postgres connection 'test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79'
+[0m08:25:01.508444 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b'
+[0m08:25:01.524703 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482'
+[0m08:25:01.525155 [debug] [Thread-1 (]: Began compiling node test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256
+[0m08:25:01.525461 [debug] [Thread-2 (]: Began compiling node test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79
+[0m08:25:01.525736 [debug] [Thread-3 (]: Began compiling node test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b
+[0m08:25:01.526443 [debug] [Thread-4 (]: Began compiling node test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482
+[0m08:25:01.665154 [debug] [Thread-2 (]: Writing injected SQL for node "test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79"
+[0m08:25:01.676189 [debug] [Thread-1 (]: Writing injected SQL for node "test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256"
+[0m08:25:01.695941 [debug] [Thread-4 (]: Writing injected SQL for node "test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482"
+[0m08:25:01.699827 [debug] [Thread-3 (]: Writing injected SQL for node "test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b"
+[0m08:25:01.721936 [debug] [Thread-1 (]: Began executing node test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256
+[0m08:25:01.722234 [debug] [Thread-2 (]: Began executing node test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79
+[0m08:25:01.739304 [debug] [Thread-1 (]: Writing runtime sql for node "test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256"
+[0m08:25:01.741461 [debug] [Thread-2 (]: Writing runtime sql for node "test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79"
+[0m08:25:01.741839 [debug] [Thread-3 (]: Began executing node test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b
+[0m08:25:01.742114 [debug] [Thread-4 (]: Began executing node test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482
+[0m08:25:01.764550 [debug] [Thread-3 (]: Writing runtime sql for node "test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b"
+[0m08:25:01.772963 [debug] [Thread-2 (]: Using postgres connection "test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79"
+[0m08:25:01.773970 [debug] [Thread-1 (]: Using postgres connection "test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256"
+[0m08:25:01.775524 [debug] [Thread-4 (]: Writing runtime sql for node "test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482"
+[0m08:25:01.777997 [debug] [Thread-2 (]: On test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        source as value_field,
+        count(*) as n_records
+
+    from "postgres"."public"."stg_tools"
+    group by source
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'product_hunt','hackernews','github'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m08:25:01.780797 [debug] [Thread-1 (]: On test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        momentum_label as value_field,
+        count(*) as n_records
+
+    from "postgres"."public"."int_tools_clean"
+    group by momentum_label
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'hot','rising','new'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m08:25:01.781958 [debug] [Thread-3 (]: Using postgres connection "test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b"
+[0m08:25:01.784883 [debug] [Thread-3 (]: On test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select source
+from "postgres"."public"."fct_trending_tools"
+where source is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m08:25:01.784174 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:25:01.784565 [debug] [Thread-4 (]: Using postgres connection "test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482"
+[0m08:25:01.783731 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m08:25:01.785107 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m08:25:01.788588 [debug] [Thread-4 (]: On test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select tool_id
+from "postgres"."public"."int_tools_clean"
+where tool_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m08:25:01.795801 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m08:25:02.410425 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.620 seconds
+[0m08:25:02.427482 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.631 seconds
+[0m08:25:02.428381 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.645 seconds
+[0m08:25:02.433510 [debug] [Thread-1 (]: On test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256: ROLLBACK
+[0m08:25:02.433808 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.649 seconds
+[0m08:25:02.435367 [debug] [Thread-4 (]: On test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482: ROLLBACK
+[0m08:25:02.436380 [debug] [Thread-2 (]: On test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79: ROLLBACK
+[0m08:25:02.437478 [debug] [Thread-3 (]: On test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b: ROLLBACK
+[0m08:25:02.502511 [debug] [Thread-1 (]: On test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256: Close
+[0m08:25:02.502898 [debug] [Thread-3 (]: On test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b: Close
+[0m08:25:02.505001 [info ] [Thread-1 (]: 1 of 6 PASS accepted_values_int_tools_clean_momentum_label__hot__rising__new ... [[32mPASS[0m in 1.02s]
+[0m08:25:02.505487 [info ] [Thread-3 (]: 3 of 6 PASS not_null_fct_trending_tools_source ................................. [[32mPASS[0m in 1.00s]
+[0m08:25:02.506519 [debug] [Thread-1 (]: Finished running node test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256
+[0m08:25:02.506780 [debug] [Thread-4 (]: On test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482: Close
+[0m08:25:02.507064 [debug] [Thread-2 (]: On test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79: Close
+[0m08:25:02.507551 [debug] [Thread-3 (]: Finished running node test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b
+[0m08:25:02.508237 [debug] [Thread-1 (]: Began running node test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6
+[0m08:25:02.509085 [info ] [Thread-4 (]: 4 of 6 PASS not_null_int_tools_clean_tool_id ................................... [[32mPASS[0m in 0.98s]
+[0m08:25:02.509475 [info ] [Thread-2 (]: 2 of 6 PASS accepted_values_stg_tools_source__product_hunt__hackernews__github . [[32mPASS[0m in 1.02s]
+[0m08:25:02.509749 [debug] [Thread-3 (]: Began running node test.new_tools_radar.not_null_stg_tools_tool_id.661b000833
+[0m08:25:02.510150 [info ] [Thread-1 (]: 5 of 6 START test not_null_stg_tools_source .................................... [RUN]
+[0m08:25:02.510489 [debug] [Thread-4 (]: Finished running node test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482
+[0m08:25:02.510849 [debug] [Thread-2 (]: Finished running node test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79
+[0m08:25:02.511123 [info ] [Thread-3 (]: 6 of 6 START test not_null_stg_tools_tool_id ................................... [RUN]
+[0m08:25:02.511552 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256, now test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6)
+[0m08:25:02.512142 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b, now test.new_tools_radar.not_null_stg_tools_tool_id.661b000833)
+[0m08:25:02.512487 [debug] [Thread-1 (]: Began compiling node test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6
+[0m08:25:02.512719 [debug] [Thread-3 (]: Began compiling node test.new_tools_radar.not_null_stg_tools_tool_id.661b000833
+[0m08:25:02.518422 [debug] [Thread-1 (]: Writing injected SQL for node "test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6"
+[0m08:25:02.520556 [debug] [Thread-3 (]: Writing injected SQL for node "test.new_tools_radar.not_null_stg_tools_tool_id.661b000833"
+[0m08:25:02.524328 [debug] [Thread-3 (]: Began executing node test.new_tools_radar.not_null_stg_tools_tool_id.661b000833
+[0m08:25:02.525653 [debug] [Thread-3 (]: Writing runtime sql for node "test.new_tools_radar.not_null_stg_tools_tool_id.661b000833"
+[0m08:25:02.530329 [debug] [Thread-1 (]: Began executing node test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6
+[0m08:25:02.531401 [debug] [Thread-1 (]: Writing runtime sql for node "test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6"
+[0m08:25:02.531699 [debug] [Thread-3 (]: Using postgres connection "test.new_tools_radar.not_null_stg_tools_tool_id.661b000833"
+[0m08:25:02.532067 [debug] [Thread-3 (]: On test.new_tools_radar.not_null_stg_tools_tool_id.661b000833: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "test.new_tools_radar.not_null_stg_tools_tool_id.661b000833"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select tool_id
+from "postgres"."public"."stg_tools"
+where tool_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m08:25:02.532377 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m08:25:02.532614 [debug] [Thread-1 (]: Using postgres connection "test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6"
+[0m08:25:02.533419 [debug] [Thread-1 (]: On test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select source
+from "postgres"."public"."stg_tools"
+where source is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m08:25:02.533750 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:25:03.087451 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.552 seconds
+[0m08:25:03.096474 [debug] [Thread-1 (]: On test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6: ROLLBACK
+[0m08:25:03.096823 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.564 seconds
+[0m08:25:03.099056 [debug] [Thread-3 (]: On test.new_tools_radar.not_null_stg_tools_tool_id.661b000833: ROLLBACK
+[0m08:25:03.164110 [debug] [Thread-1 (]: On test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6: Close
+[0m08:25:03.164597 [debug] [Thread-3 (]: On test.new_tools_radar.not_null_stg_tools_tool_id.661b000833: Close
+[0m08:25:03.169611 [info ] [Thread-1 (]: 5 of 6 PASS not_null_stg_tools_source .......................................... [[32mPASS[0m in 0.66s]
+[0m08:25:03.173077 [info ] [Thread-3 (]: 6 of 6 PASS not_null_stg_tools_tool_id ......................................... [[32mPASS[0m in 0.66s]
+[0m08:25:03.174428 [debug] [Thread-1 (]: Finished running node test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6
+[0m08:25:03.175198 [debug] [Thread-3 (]: Finished running node test.new_tools_radar.not_null_stg_tools_tool_id.661b000833
+[0m08:25:03.186046 [debug] [MainThread]: On master: COMMIT
+[0m08:25:03.187219 [debug] [MainThread]: Using postgres connection "master"
+[0m08:25:03.187857 [debug] [MainThread]: On master: COMMIT
+[0m08:25:03.188339 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m08:25:03.762029 [debug] [MainThread]: SQL status: COMMIT in 0.571 seconds
+[0m08:25:03.765487 [debug] [MainThread]: On master: Close
+[0m08:25:03.769127 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:25:03.770184 [debug] [MainThread]: Connection 'test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6' was properly closed.
+[0m08:25:03.770937 [debug] [MainThread]: Connection 'test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79' was properly closed.
+[0m08:25:03.771480 [debug] [MainThread]: Connection 'test.new_tools_radar.not_null_stg_tools_tool_id.661b000833' was properly closed.
+[0m08:25:03.772007 [debug] [MainThread]: Connection 'test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482' was properly closed.
+[0m08:25:03.773585 [info ] [MainThread]: 
+[0m08:25:03.774754 [info ] [MainThread]: Finished running 6 data tests in 0 hours 0 minutes and 4.00 seconds (4.00s).
+[0m08:25:03.778971 [debug] [MainThread]: Command end result
+[0m08:25:03.814256 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/project/dbt/target/manifest.json
+[0m08:25:03.822619 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/project/dbt/target/semantic_manifest.json
+[0m08:25:03.830376 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/project/dbt/target/run_results.json
+[0m08:25:03.830775 [info ] [MainThread]: 
+[0m08:25:03.831158 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m08:25:03.831394 [info ] [MainThread]: 
+[0m08:25:03.831742 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=6
+[0m08:25:03.834202 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 4.6008153, "process_in_blocks": "3960", "process_kernel_time": 0.840167, "process_mem_max_rss": "128548", "process_out_blocks": "2052", "process_user_time": 2.374385}
+[0m08:25:03.834784 [debug] [MainThread]: Command `dbt test` succeeded at 08:25:03.834714 after 4.60 seconds
+[0m08:25:03.835387 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaca602c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac4b2bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac4b39b0>]}
+[0m08:25:03.835837 [debug] [MainThread]: Flushing usage events
+[0m08:25:04.201127 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:28:00.712962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff842f46b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff85dc4a70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff851ab560>]}
+
+
+============================== 08:28:00.740930 | f8cc6e01-7233-4ef6-ade2-bba3c7653a72 ==============================
+[0m08:28:00.740930 [info ] [MainThread]: Running with dbt=1.11.8
+[0m08:28:00.741309 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'debug': 'False', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'partial_parse': 'True', 'invocation_command': 'dbt deps', 'use_experimental_parser': 'False', 'static_parser': 'True', 'printer_width': '80', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'use_colors': 'True', 'fail_fast': 'False', 'write_json': 'True', 'indirect_selection': 'eager', 'quiet': 'False', 'empty': 'None', 'warn_error': 'None', 'log_cache_events': 'False', 'log_format': 'default', 'version_check': 'True', 'log_path': '/opt/project/dbt/logs', 'profiles_dir': '/opt/project/dbt'}
+[0m08:28:00.946329 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f8cc6e01-7233-4ef6-ade2-bba3c7653a72', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff844817c0>]}
+[0m08:28:00.996935 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m08:28:01.010922 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m08:28:01.012831 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.35711437, "process_in_blocks": "0", "process_kernel_time": 2.215599, "process_mem_max_rss": "106296", "process_out_blocks": "3", "process_user_time": 1.919846}
+[0m08:28:01.013273 [debug] [MainThread]: Command `dbt deps` succeeded at 08:28:01.013188 after 0.36 seconds
+[0m08:28:01.013583 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff840c3da0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff842f6390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff84077470>]}
+[0m08:28:01.013859 [debug] [MainThread]: Flushing usage events
+[0m08:28:01.657278 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:28:04.814243 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9b880b60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9b6399d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9881fe00>]}
+
+
+============================== 08:28:04.818794 | 8233a259-1b83-43b9-8b53-874a6faa7a11 ==============================
+[0m08:28:04.818794 [info ] [MainThread]: Running with dbt=1.11.8
+[0m08:28:04.819248 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'profiles_dir': '/opt/project/dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'cache_selected_only': 'False', 'no_print': 'None', 'invocation_command': 'dbt run --profiles-dir /opt/project/dbt --target dev', 'log_path': '/opt/project/dbt/logs', 'use_experimental_parser': 'False', 'write_json': 'True', 'printer_width': '80', 'log_format': 'default', 'empty': 'False', 'fail_fast': 'False', 'debug': 'False', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'warn_error': 'None', 'partial_parse': 'True', 'static_parser': 'True'}
+[0m08:28:05.033095 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8233a259-1b83-43b9-8b53-874a6faa7a11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff98ca2d80>]}
+[0m08:28:05.071010 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8233a259-1b83-43b9-8b53-874a6faa7a11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff99212ba0>]}
+[0m08:28:05.072105 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m08:28:05.152573 [debug] [MainThread]: checksum: 205f67941a37c44b34a8b709ae683ccb08f2061b4926cd29bbf893726d03834e, vars: {}, profile: , target: dev, version: 1.11.8
+[0m08:28:05.249262 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m08:28:05.249774 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m08:28:05.249995 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m08:28:05.272002 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8233a259-1b83-43b9-8b53-874a6faa7a11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff97b89910>]}
+[0m08:28:05.343153 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/project/dbt/target/manifest.json
+[0m08:28:05.348763 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/project/dbt/target/semantic_manifest.json
+[0m08:28:05.393654 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8233a259-1b83-43b9-8b53-874a6faa7a11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9769cec0>]}
+[0m08:28:05.394546 [info ] [MainThread]: Found 3 models, 6 data tests, 1 source, 465 macros
+[0m08:28:05.395227 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8233a259-1b83-43b9-8b53-874a6faa7a11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff976f4dd0>]}
+[0m08:28:05.397774 [info ] [MainThread]: 
+[0m08:28:05.398888 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m08:28:05.399327 [info ] [MainThread]: 
+[0m08:28:05.400709 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m08:28:05.404513 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m08:28:05.732209 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m08:28:05.742166 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m08:28:05.742636 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:28:06.341542 [debug] [ThreadPool]: SQL status: SELECT 22 in 0.598 seconds
+[0m08:28:06.354175 [debug] [ThreadPool]: On list_postgres: Close
+[0m08:28:06.364465 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now list_postgres_public)
+[0m08:28:06.375695 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m08:28:06.485047 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m08:28:06.485686 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m08:28:07.048633 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.561 seconds
+[0m08:28:07.057154 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m08:28:07.122656 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m08:28:07.143527 [debug] [MainThread]: Using postgres connection "master"
+[0m08:28:07.144021 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m08:28:07.144285 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:28:07.707182 [debug] [MainThread]: SQL status: SELECT 2 in 0.563 seconds
+[0m08:28:07.709676 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8233a259-1b83-43b9-8b53-874a6faa7a11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff976f4f80>]}
+[0m08:28:07.710576 [debug] [MainThread]: On master: ROLLBACK
+[0m08:28:07.775550 [debug] [MainThread]: On master: COMMIT
+[0m08:28:07.776700 [debug] [MainThread]: Using postgres connection "master"
+[0m08:28:07.776979 [debug] [MainThread]: On master: COMMIT
+[0m08:28:07.909894 [debug] [MainThread]: SQL status: COMMIT in 0.132 seconds
+[0m08:28:07.911499 [debug] [MainThread]: On master: Close
+[0m08:28:07.927267 [debug] [Thread-1 (]: Began running node model.new_tools_radar.stg_tools
+[0m08:28:07.928289 [info ] [Thread-1 (]: 1 of 3 START sql view model public.stg_tools ................................... [RUN]
+[0m08:28:07.929016 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public, now model.new_tools_radar.stg_tools)
+[0m08:28:07.929417 [debug] [Thread-1 (]: Began compiling node model.new_tools_radar.stg_tools
+[0m08:28:07.944877 [debug] [Thread-1 (]: Writing injected SQL for node "model.new_tools_radar.stg_tools"
+[0m08:28:07.947180 [debug] [Thread-1 (]: Began executing node model.new_tools_radar.stg_tools
+[0m08:28:07.970137 [debug] [Thread-1 (]: Writing runtime sql for node "model.new_tools_radar.stg_tools"
+[0m08:28:07.971484 [debug] [Thread-1 (]: Using postgres connection "model.new_tools_radar.stg_tools"
+[0m08:28:07.971818 [debug] [Thread-1 (]: On model.new_tools_radar.stg_tools: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.stg_tools"} */
+
+  create view "postgres"."public"."stg_tools__dbt_tmp"
+    
+    
+  as (
+    with source_data as (
+    select
+        id::text as tool_id,
+        trim(name) as tool_name,
+        lower(trim(source)) as source,
+        nullif(trim(description), '') as description,
+        nullif(trim(url), '') as url,
+        coalesce(score, 0)::int as score,
+        created_at::timestamptz as created_at,
+        ingested_at::timestamptz as ingested_at
+    from "postgres"."public"."raw_tools"
+)
+
+select *
+from source_data
+where tool_id is not null
+  and tool_name is not null
+  and source is not null
+  );
+[0m08:28:07.972129 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:28:08.523422 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.551 seconds
+[0m08:28:08.534933 [debug] [Thread-1 (]: Using postgres connection "model.new_tools_radar.stg_tools"
+[0m08:28:08.535425 [debug] [Thread-1 (]: On model.new_tools_radar.stg_tools: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.stg_tools"} */
+alter table "postgres"."public"."stg_tools" rename to "stg_tools__dbt_backup"
+[0m08:28:08.605051 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.068 seconds
+[0m08:28:08.609523 [debug] [Thread-1 (]: Using postgres connection "model.new_tools_radar.stg_tools"
+[0m08:28:08.609954 [debug] [Thread-1 (]: On model.new_tools_radar.stg_tools: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.stg_tools"} */
+alter table "postgres"."public"."stg_tools__dbt_tmp" rename to "stg_tools"
+[0m08:28:08.676978 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.066 seconds
+[0m08:28:08.687641 [debug] [Thread-1 (]: On model.new_tools_radar.stg_tools: COMMIT
+[0m08:28:08.688071 [debug] [Thread-1 (]: Using postgres connection "model.new_tools_radar.stg_tools"
+[0m08:28:08.688320 [debug] [Thread-1 (]: On model.new_tools_radar.stg_tools: COMMIT
+[0m08:28:08.753674 [debug] [Thread-1 (]: SQL status: COMMIT in 0.065 seconds
+[0m08:28:08.759065 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public"."stg_tools__dbt_backup"
+[0m08:28:08.762117 [debug] [Thread-1 (]: Using postgres connection "model.new_tools_radar.stg_tools"
+[0m08:28:08.762426 [debug] [Thread-1 (]: On model.new_tools_radar.stg_tools: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.stg_tools"} */
+drop view if exists "postgres"."public"."stg_tools__dbt_backup" cascade
+[0m08:28:08.830973 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.068 seconds
+[0m08:28:08.837051 [debug] [Thread-1 (]: On model.new_tools_radar.stg_tools: Close
+[0m08:28:08.842500 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8233a259-1b83-43b9-8b53-874a6faa7a11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9b338a70>]}
+[0m08:28:08.843610 [info ] [Thread-1 (]: 1 of 3 OK created sql view model public.stg_tools .............................. [[32mCREATE VIEW[0m in 0.91s]
+[0m08:28:08.844257 [debug] [Thread-1 (]: Finished running node model.new_tools_radar.stg_tools
+[0m08:28:08.849300 [debug] [Thread-3 (]: Began running node model.new_tools_radar.int_tools_clean
+[0m08:28:08.850036 [info ] [Thread-3 (]: 2 of 3 START sql table model public.int_tools_clean ............................ [RUN]
+[0m08:28:08.850626 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.new_tools_radar.int_tools_clean'
+[0m08:28:08.850948 [debug] [Thread-3 (]: Began compiling node model.new_tools_radar.int_tools_clean
+[0m08:28:08.853805 [debug] [Thread-3 (]: Writing injected SQL for node "model.new_tools_radar.int_tools_clean"
+[0m08:28:08.854814 [debug] [Thread-3 (]: Began executing node model.new_tools_radar.int_tools_clean
+[0m08:28:08.870017 [debug] [Thread-3 (]: Writing runtime sql for node "model.new_tools_radar.int_tools_clean"
+[0m08:28:08.871189 [debug] [Thread-3 (]: Using postgres connection "model.new_tools_radar.int_tools_clean"
+[0m08:28:08.871458 [debug] [Thread-3 (]: On model.new_tools_radar.int_tools_clean: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.int_tools_clean"} */
+
+  
+    
+
+  create  table "postgres"."public"."int_tools_clean__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with ranked as (
+    select
+        tool_id,
+        tool_name,
+        source,
+        description,
+        url,
+        score,
+        created_at,
+        ingested_at,
+        row_number() over (
+            partition by source, tool_id
+            order by ingested_at desc
+        ) as rn
+    from "postgres"."public"."stg_tools"
+),
+deduped as (
+    select
+        tool_id,
+        tool_name,
+        source,
+        description,
+        url,
+        score,
+        created_at,
+        ingested_at
+    from ranked
+    where rn = 1
+)
+
+select
+    tool_id,
+    tool_name,
+    source,
+    description,
+    url,
+    score,
+    created_at,
+    ingested_at,
+    case
+        when score >= 500 then 'hot'
+        when score >= 100 then 'rising'
+        else 'new'
+    end as momentum_label
+from deduped
+  );
+  
+[0m08:28:08.871720 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m08:28:09.434779 [debug] [Thread-3 (]: SQL status: SELECT 100 in 0.563 seconds
+[0m08:28:09.441305 [debug] [Thread-3 (]: Using postgres connection "model.new_tools_radar.int_tools_clean"
+[0m08:28:09.441725 [debug] [Thread-3 (]: On model.new_tools_radar.int_tools_clean: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.int_tools_clean"} */
+alter table "postgres"."public"."int_tools_clean" rename to "int_tools_clean__dbt_backup"
+[0m08:28:09.508575 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.066 seconds
+[0m08:28:09.511128 [debug] [Thread-3 (]: Using postgres connection "model.new_tools_radar.int_tools_clean"
+[0m08:28:09.511752 [debug] [Thread-3 (]: On model.new_tools_radar.int_tools_clean: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.int_tools_clean"} */
+alter table "postgres"."public"."int_tools_clean__dbt_tmp" rename to "int_tools_clean"
+[0m08:28:09.575366 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.063 seconds
+[0m08:28:09.577381 [debug] [Thread-3 (]: On model.new_tools_radar.int_tools_clean: COMMIT
+[0m08:28:09.577854 [debug] [Thread-3 (]: Using postgres connection "model.new_tools_radar.int_tools_clean"
+[0m08:28:09.578208 [debug] [Thread-3 (]: On model.new_tools_radar.int_tools_clean: COMMIT
+[0m08:28:09.649276 [debug] [Thread-3 (]: SQL status: COMMIT in 0.069 seconds
+[0m08:28:09.667472 [debug] [Thread-3 (]: Applying DROP to: "postgres"."public"."int_tools_clean__dbt_backup"
+[0m08:28:09.679757 [debug] [Thread-3 (]: Using postgres connection "model.new_tools_radar.int_tools_clean"
+[0m08:28:09.682254 [debug] [Thread-3 (]: On model.new_tools_radar.int_tools_clean: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.int_tools_clean"} */
+drop table if exists "postgres"."public"."int_tools_clean__dbt_backup" cascade
+[0m08:28:09.756294 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.072 seconds
+[0m08:28:09.771236 [debug] [Thread-3 (]: On model.new_tools_radar.int_tools_clean: Close
+[0m08:28:09.780221 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8233a259-1b83-43b9-8b53-874a6faa7a11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff96ae6030>]}
+[0m08:28:09.785859 [info ] [Thread-3 (]: 2 of 3 OK created sql table model public.int_tools_clean ....................... [[32mSELECT 100[0m in 0.93s]
+[0m08:28:09.792211 [debug] [Thread-3 (]: Finished running node model.new_tools_radar.int_tools_clean
+[0m08:28:09.805898 [debug] [Thread-2 (]: Began running node model.new_tools_radar.fct_trending_tools
+[0m08:28:09.807377 [info ] [Thread-2 (]: 3 of 3 START sql table model public.fct_trending_tools ......................... [RUN]
+[0m08:28:09.809502 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.new_tools_radar.fct_trending_tools'
+[0m08:28:09.810293 [debug] [Thread-2 (]: Began compiling node model.new_tools_radar.fct_trending_tools
+[0m08:28:09.827056 [debug] [Thread-2 (]: Writing injected SQL for node "model.new_tools_radar.fct_trending_tools"
+[0m08:28:09.828371 [debug] [Thread-2 (]: Began executing node model.new_tools_radar.fct_trending_tools
+[0m08:28:09.831666 [debug] [Thread-2 (]: Writing runtime sql for node "model.new_tools_radar.fct_trending_tools"
+[0m08:28:09.834548 [debug] [Thread-2 (]: Using postgres connection "model.new_tools_radar.fct_trending_tools"
+[0m08:28:09.834906 [debug] [Thread-2 (]: On model.new_tools_radar.fct_trending_tools: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.fct_trending_tools"} */
+
+  
+    
+
+  create  table "postgres"."public"."fct_trending_tools__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with base as (
+    select *
+    from "postgres"."public"."int_tools_clean"
+),
+aggregated as (
+    select
+        source,
+        date_trunc('day', created_at) as created_day,
+        count(*) as tools_count,
+        avg(score)::numeric(10, 2) as avg_score,
+        max(score) as max_score
+    from base
+    group by 1, 2
+)
+
+select
+    source,
+    created_day,
+    tools_count,
+    avg_score,
+    max_score,
+    rank() over (partition by created_day order by avg_score desc) as source_rank_for_day
+from aggregated
+  );
+  
+[0m08:28:09.835167 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m08:28:10.412889 [debug] [Thread-2 (]: SQL status: SELECT 24 in 0.577 seconds
+[0m08:28:10.423519 [debug] [Thread-2 (]: Using postgres connection "model.new_tools_radar.fct_trending_tools"
+[0m08:28:10.424715 [debug] [Thread-2 (]: On model.new_tools_radar.fct_trending_tools: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.fct_trending_tools"} */
+alter table "postgres"."public"."fct_trending_tools" rename to "fct_trending_tools__dbt_backup"
+[0m08:28:10.491765 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.066 seconds
+[0m08:28:10.497582 [debug] [Thread-2 (]: Using postgres connection "model.new_tools_radar.fct_trending_tools"
+[0m08:28:10.498609 [debug] [Thread-2 (]: On model.new_tools_radar.fct_trending_tools: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.fct_trending_tools"} */
+alter table "postgres"."public"."fct_trending_tools__dbt_tmp" rename to "fct_trending_tools"
+[0m08:28:10.563791 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.064 seconds
+[0m08:28:10.566025 [debug] [Thread-2 (]: On model.new_tools_radar.fct_trending_tools: COMMIT
+[0m08:28:10.566609 [debug] [Thread-2 (]: Using postgres connection "model.new_tools_radar.fct_trending_tools"
+[0m08:28:10.567092 [debug] [Thread-2 (]: On model.new_tools_radar.fct_trending_tools: COMMIT
+[0m08:28:10.633593 [debug] [Thread-2 (]: SQL status: COMMIT in 0.065 seconds
+[0m08:28:10.637510 [debug] [Thread-2 (]: Applying DROP to: "postgres"."public"."fct_trending_tools__dbt_backup"
+[0m08:28:10.638435 [debug] [Thread-2 (]: Using postgres connection "model.new_tools_radar.fct_trending_tools"
+[0m08:28:10.638832 [debug] [Thread-2 (]: On model.new_tools_radar.fct_trending_tools: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "model.new_tools_radar.fct_trending_tools"} */
+drop table if exists "postgres"."public"."fct_trending_tools__dbt_backup" cascade
+[0m08:28:10.707293 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.068 seconds
+[0m08:28:10.710671 [debug] [Thread-2 (]: On model.new_tools_radar.fct_trending_tools: Close
+[0m08:28:10.712519 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8233a259-1b83-43b9-8b53-874a6faa7a11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff96a98bc0>]}
+[0m08:28:10.713915 [info ] [Thread-2 (]: 3 of 3 OK created sql table model public.fct_trending_tools .................... [[32mSELECT 24[0m in 0.90s]
+[0m08:28:10.715158 [debug] [Thread-2 (]: Finished running node model.new_tools_radar.fct_trending_tools
+[0m08:28:10.719176 [debug] [MainThread]: On master: COMMIT
+[0m08:28:10.720090 [debug] [MainThread]: Using postgres connection "master"
+[0m08:28:10.720668 [debug] [MainThread]: On master: COMMIT
+[0m08:28:10.721034 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m08:28:11.271753 [debug] [MainThread]: SQL status: COMMIT in 0.550 seconds
+[0m08:28:11.273986 [debug] [MainThread]: On master: Close
+[0m08:28:11.276987 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:28:11.277887 [debug] [MainThread]: Connection 'model.new_tools_radar.stg_tools' was properly closed.
+[0m08:28:11.278440 [debug] [MainThread]: Connection 'model.new_tools_radar.int_tools_clean' was properly closed.
+[0m08:28:11.278916 [debug] [MainThread]: Connection 'model.new_tools_radar.fct_trending_tools' was properly closed.
+[0m08:28:11.280287 [info ] [MainThread]: 
+[0m08:28:11.281322 [info ] [MainThread]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 5.88 seconds (5.88s).
+[0m08:28:11.283729 [debug] [MainThread]: Command end result
+[0m08:28:11.325402 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/project/dbt/target/manifest.json
+[0m08:28:11.331131 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/project/dbt/target/semantic_manifest.json
+[0m08:28:11.341918 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/project/dbt/target/run_results.json
+[0m08:28:11.342738 [info ] [MainThread]: 
+[0m08:28:11.343325 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m08:28:11.343760 [info ] [MainThread]: 
+[0m08:28:11.344164 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m08:28:11.346388 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 6.5636353, "process_in_blocks": "0", "process_kernel_time": 0.924553, "process_mem_max_rss": "127676", "process_out_blocks": "2048", "process_user_time": 2.830884}
+[0m08:28:11.350364 [debug] [MainThread]: Command `dbt run` succeeded at 08:28:11.349976 after 6.57 seconds
+[0m08:28:11.352202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff99381520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff96b9f860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff96b9f680>]}
+[0m08:28:11.353832 [debug] [MainThread]: Flushing usage events
+[0m08:28:11.821009 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m08:28:13.909979 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7f4faba0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7f27a6f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7fbdc920>]}
+
+
+============================== 08:28:13.917283 | f1dc6964-e108-4441-b390-220116db29ae ==============================
+[0m08:28:13.917283 [info ] [MainThread]: Running with dbt=1.11.8
+[0m08:28:13.918030 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'printer_width': '80', 'no_print': 'None', 'static_parser': 'True', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'log_path': '/opt/project/dbt/logs', 'debug': 'False', 'log_format': 'default', 'target_path': 'None', 'log_cache_events': 'False', 'use_colors': 'True', 'empty': 'None', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'indirect_selection': 'eager', 'profiles_dir': '/opt/project/dbt', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt test --profiles-dir /opt/project/dbt --target dev', 'quiet': 'False'}
+[0m08:28:14.023906 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f1dc6964-e108-4441-b390-220116db29ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7ef79460>]}
+[0m08:28:14.052917 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f1dc6964-e108-4441-b390-220116db29ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7fdead50>]}
+[0m08:28:14.053609 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m08:28:14.108075 [debug] [MainThread]: checksum: 205f67941a37c44b34a8b709ae683ccb08f2061b4926cd29bbf893726d03834e, vars: {}, profile: , target: dev, version: 1.11.8
+[0m08:28:14.190526 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m08:28:14.191166 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m08:28:14.191396 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m08:28:14.215657 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f1dc6964-e108-4441-b390-220116db29ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7ee78ad0>]}
+[0m08:28:14.259575 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/project/dbt/target/manifest.json
+[0m08:28:14.260845 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/project/dbt/target/semantic_manifest.json
+[0m08:28:14.283554 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f1dc6964-e108-4441-b390-220116db29ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7de3ae40>]}
+[0m08:28:14.283928 [info ] [MainThread]: Found 3 models, 6 data tests, 1 source, 465 macros
+[0m08:28:14.284156 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f1dc6964-e108-4441-b390-220116db29ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7dfd21e0>]}
+[0m08:28:14.285247 [info ] [MainThread]: 
+[0m08:28:14.285513 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m08:28:14.285707 [info ] [MainThread]: 
+[0m08:28:14.286009 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m08:28:14.288223 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres_public'
+[0m08:28:14.312795 [debug] [ThreadPool]: Using postgres connection "list_postgres_public"
+[0m08:28:14.313248 [debug] [ThreadPool]: On list_postgres_public: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "connection_name": "list_postgres_public"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m08:28:14.313518 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:28:14.894047 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.578 seconds
+[0m08:28:14.903299 [debug] [ThreadPool]: On list_postgres_public: ROLLBACK
+[0m08:28:14.971531 [debug] [ThreadPool]: On list_postgres_public: Close
+[0m08:28:14.988972 [debug] [MainThread]: Using postgres connection "master"
+[0m08:28:14.989636 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m08:28:14.990031 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:28:15.589464 [debug] [MainThread]: SQL status: SELECT 2 in 0.590 seconds
+[0m08:28:15.685606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f1dc6964-e108-4441-b390-220116db29ae', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e406a20>]}
+[0m08:28:15.709325 [debug] [MainThread]: On master: ROLLBACK
+[0m08:28:15.778538 [debug] [MainThread]: On master: COMMIT
+[0m08:28:15.783493 [debug] [MainThread]: Using postgres connection "master"
+[0m08:28:15.786206 [debug] [MainThread]: On master: COMMIT
+[0m08:28:15.918093 [debug] [MainThread]: SQL status: COMMIT in 0.129 seconds
+[0m08:28:15.920372 [debug] [MainThread]: On master: Close
+[0m08:28:15.988258 [debug] [Thread-1 (]: Began running node test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256
+[0m08:28:15.989098 [debug] [Thread-2 (]: Began running node test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79
+[0m08:28:15.989397 [debug] [Thread-3 (]: Began running node test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b
+[0m08:28:15.993438 [debug] [Thread-4 (]: Began running node test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482
+[0m08:28:15.994592 [info ] [Thread-1 (]: 1 of 6 START test accepted_values_int_tools_clean_momentum_label__hot__rising__new  [RUN]
+[0m08:28:15.995664 [info ] [Thread-2 (]: 2 of 6 START test accepted_values_stg_tools_source__product_hunt__hackernews__github  [RUN]
+[0m08:28:15.996998 [info ] [Thread-3 (]: 3 of 6 START test not_null_fct_trending_tools_source ........................... [RUN]
+[0m08:28:15.998342 [info ] [Thread-4 (]: 4 of 6 START test not_null_int_tools_clean_tool_id ............................. [RUN]
+[0m08:28:15.999356 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public, now test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256)
+[0m08:28:16.000727 [debug] [Thread-2 (]: Acquiring new postgres connection 'test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79'
+[0m08:28:16.001072 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b'
+[0m08:28:16.001384 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482'
+[0m08:28:16.001705 [debug] [Thread-1 (]: Began compiling node test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256
+[0m08:28:16.001959 [debug] [Thread-2 (]: Began compiling node test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79
+[0m08:28:16.002199 [debug] [Thread-3 (]: Began compiling node test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b
+[0m08:28:16.002455 [debug] [Thread-4 (]: Began compiling node test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482
+[0m08:28:16.060208 [debug] [Thread-1 (]: Writing injected SQL for node "test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256"
+[0m08:28:16.062827 [debug] [Thread-2 (]: Writing injected SQL for node "test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79"
+[0m08:28:16.067502 [debug] [Thread-3 (]: Writing injected SQL for node "test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b"
+[0m08:28:16.071255 [debug] [Thread-4 (]: Writing injected SQL for node "test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482"
+[0m08:28:16.074856 [debug] [Thread-2 (]: Began executing node test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79
+[0m08:28:16.075652 [debug] [Thread-1 (]: Began executing node test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256
+[0m08:28:16.082551 [debug] [Thread-4 (]: Began executing node test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482
+[0m08:28:16.100254 [debug] [Thread-3 (]: Began executing node test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b
+[0m08:28:16.104348 [debug] [Thread-2 (]: Writing runtime sql for node "test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79"
+[0m08:28:16.105995 [debug] [Thread-1 (]: Writing runtime sql for node "test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256"
+[0m08:28:16.108844 [debug] [Thread-4 (]: Writing runtime sql for node "test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482"
+[0m08:28:16.110047 [debug] [Thread-3 (]: Writing runtime sql for node "test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b"
+[0m08:28:16.111794 [debug] [Thread-2 (]: Using postgres connection "test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79"
+[0m08:28:16.112135 [debug] [Thread-1 (]: Using postgres connection "test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256"
+[0m08:28:16.112471 [debug] [Thread-2 (]: On test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        source as value_field,
+        count(*) as n_records
+
+    from "postgres"."public"."stg_tools"
+    group by source
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'product_hunt','hackernews','github'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m08:28:16.112691 [debug] [Thread-4 (]: Using postgres connection "test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482"
+[0m08:28:16.112946 [debug] [Thread-3 (]: Using postgres connection "test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b"
+[0m08:28:16.113102 [debug] [Thread-1 (]: On test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        momentum_label as value_field,
+        count(*) as n_records
+
+    from "postgres"."public"."int_tools_clean"
+    group by momentum_label
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'hot','rising','new'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m08:28:16.114018 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:28:16.113584 [debug] [Thread-4 (]: On test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select tool_id
+from "postgres"."public"."int_tools_clean"
+where tool_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m08:28:16.113812 [debug] [Thread-3 (]: On test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select source
+from "postgres"."public"."fct_trending_tools"
+where source is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m08:28:16.113350 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m08:28:16.115702 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m08:28:16.116763 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m08:28:16.679988 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.562 seconds
+[0m08:28:16.691562 [debug] [Thread-3 (]: On test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b: ROLLBACK
+[0m08:28:16.698917 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.583 seconds
+[0m08:28:16.699272 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.586 seconds
+[0m08:28:16.700470 [debug] [Thread-4 (]: On test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482: ROLLBACK
+[0m08:28:16.701348 [debug] [Thread-2 (]: On test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79: ROLLBACK
+[0m08:28:16.703940 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.590 seconds
+[0m08:28:16.705560 [debug] [Thread-1 (]: On test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256: ROLLBACK
+[0m08:28:16.759381 [debug] [Thread-3 (]: On test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b: Close
+[0m08:28:16.761428 [info ] [Thread-3 (]: 3 of 6 PASS not_null_fct_trending_tools_source ................................. [[32mPASS[0m in 0.76s]
+[0m08:28:16.762568 [debug] [Thread-3 (]: Finished running node test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b
+[0m08:28:16.763753 [debug] [Thread-3 (]: Began running node test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6
+[0m08:28:16.765959 [info ] [Thread-3 (]: 5 of 6 START test not_null_stg_tools_source .................................... [RUN]
+[0m08:28:16.766469 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.new_tools_radar.not_null_fct_trending_tools_source.635a90ff7b, now test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6)
+[0m08:28:16.766774 [debug] [Thread-3 (]: Began compiling node test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6
+[0m08:28:16.767142 [debug] [Thread-4 (]: On test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482: Close
+[0m08:28:16.767332 [debug] [Thread-2 (]: On test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79: Close
+[0m08:28:16.774355 [debug] [Thread-1 (]: On test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256: Close
+[0m08:28:16.775014 [debug] [Thread-3 (]: Writing injected SQL for node "test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6"
+[0m08:28:16.775726 [info ] [Thread-4 (]: 4 of 6 PASS not_null_int_tools_clean_tool_id ................................... [[32mPASS[0m in 0.77s]
+[0m08:28:16.776131 [info ] [Thread-2 (]: 2 of 6 PASS accepted_values_stg_tools_source__product_hunt__hackernews__github . [[32mPASS[0m in 0.78s]
+[0m08:28:16.776647 [info ] [Thread-1 (]: 1 of 6 PASS accepted_values_int_tools_clean_momentum_label__hot__rising__new ... [[32mPASS[0m in 0.78s]
+[0m08:28:16.780153 [debug] [Thread-1 (]: Finished running node test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256
+[0m08:28:16.777629 [debug] [Thread-2 (]: Finished running node test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79
+[0m08:28:16.779264 [debug] [Thread-3 (]: Began executing node test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6
+[0m08:28:16.777162 [debug] [Thread-4 (]: Finished running node test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482
+[0m08:28:16.781215 [debug] [Thread-1 (]: Began running node test.new_tools_radar.not_null_stg_tools_tool_id.661b000833
+[0m08:28:16.788334 [debug] [Thread-3 (]: Writing runtime sql for node "test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6"
+[0m08:28:16.789698 [info ] [Thread-1 (]: 6 of 6 START test not_null_stg_tools_tool_id ................................... [RUN]
+[0m08:28:16.790806 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.new_tools_radar.accepted_values_int_tools_clean_momentum_label__hot__rising__new.a0e7bf4256, now test.new_tools_radar.not_null_stg_tools_tool_id.661b000833)
+[0m08:28:16.791852 [debug] [Thread-1 (]: Began compiling node test.new_tools_radar.not_null_stg_tools_tool_id.661b000833
+[0m08:28:16.792377 [debug] [Thread-3 (]: Using postgres connection "test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6"
+[0m08:28:16.805977 [debug] [Thread-3 (]: On test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select source
+from "postgres"."public"."stg_tools"
+where source is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m08:28:16.804048 [debug] [Thread-1 (]: Writing injected SQL for node "test.new_tools_radar.not_null_stg_tools_tool_id.661b000833"
+[0m08:28:16.807047 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m08:28:16.809753 [debug] [Thread-1 (]: Began executing node test.new_tools_radar.not_null_stg_tools_tool_id.661b000833
+[0m08:28:16.815350 [debug] [Thread-1 (]: Writing runtime sql for node "test.new_tools_radar.not_null_stg_tools_tool_id.661b000833"
+[0m08:28:16.816339 [debug] [Thread-1 (]: Using postgres connection "test.new_tools_radar.not_null_stg_tools_tool_id.661b000833"
+[0m08:28:16.816721 [debug] [Thread-1 (]: On test.new_tools_radar.not_null_stg_tools_tool_id.661b000833: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "new_tools_radar", "target_name": "dev", "node_id": "test.new_tools_radar.not_null_stg_tools_tool_id.661b000833"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select tool_id
+from "postgres"."public"."stg_tools"
+where tool_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m08:28:16.817251 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:28:17.356614 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.549 seconds
+[0m08:28:17.358198 [debug] [Thread-3 (]: On test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6: ROLLBACK
+[0m08:28:17.422384 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.605 seconds
+[0m08:28:17.423251 [debug] [Thread-3 (]: On test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6: Close
+[0m08:28:17.425535 [debug] [Thread-1 (]: On test.new_tools_radar.not_null_stg_tools_tool_id.661b000833: ROLLBACK
+[0m08:28:17.427182 [info ] [Thread-3 (]: 5 of 6 PASS not_null_stg_tools_source .......................................... [[32mPASS[0m in 0.66s]
+[0m08:28:17.428666 [debug] [Thread-3 (]: Finished running node test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6
+[0m08:28:17.495679 [debug] [Thread-1 (]: On test.new_tools_radar.not_null_stg_tools_tool_id.661b000833: Close
+[0m08:28:17.497657 [info ] [Thread-1 (]: 6 of 6 PASS not_null_stg_tools_tool_id ......................................... [[32mPASS[0m in 0.71s]
+[0m08:28:17.498805 [debug] [Thread-1 (]: Finished running node test.new_tools_radar.not_null_stg_tools_tool_id.661b000833
+[0m08:28:17.504507 [debug] [MainThread]: On master: COMMIT
+[0m08:28:17.505523 [debug] [MainThread]: Using postgres connection "master"
+[0m08:28:17.506173 [debug] [MainThread]: On master: COMMIT
+[0m08:28:17.506723 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m08:28:18.068443 [debug] [MainThread]: SQL status: COMMIT in 0.548 seconds
+[0m08:28:18.072651 [debug] [MainThread]: On master: Close
+[0m08:28:18.075162 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:28:18.075665 [debug] [MainThread]: Connection 'test.new_tools_radar.not_null_stg_tools_tool_id.661b000833' was properly closed.
+[0m08:28:18.075939 [debug] [MainThread]: Connection 'test.new_tools_radar.accepted_values_stg_tools_source__product_hunt__hackernews__github.06f61e0e79' was properly closed.
+[0m08:28:18.076272 [debug] [MainThread]: Connection 'test.new_tools_radar.not_null_stg_tools_source.fe0151ebb6' was properly closed.
+[0m08:28:18.076691 [debug] [MainThread]: Connection 'test.new_tools_radar.not_null_int_tools_clean_tool_id.e9d0652482' was properly closed.
+[0m08:28:18.077466 [info ] [MainThread]: 
+[0m08:28:18.079293 [info ] [MainThread]: Finished running 6 data tests in 0 hours 0 minutes and 3.79 seconds (3.79s).
+[0m08:28:18.083399 [debug] [MainThread]: Command end result
+[0m08:28:18.122697 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/project/dbt/target/manifest.json
+[0m08:28:18.127403 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/project/dbt/target/semantic_manifest.json
+[0m08:28:18.133928 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/project/dbt/target/run_results.json
+[0m08:28:18.134177 [info ] [MainThread]: 
+[0m08:28:18.134552 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m08:28:18.134831 [info ] [MainThread]: 
+[0m08:28:18.135081 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=6
+[0m08:28:18.137098 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 4.2565813, "process_in_blocks": "0", "process_kernel_time": 0.529484, "process_mem_max_rss": "128620", "process_out_blocks": "2052", "process_user_time": 2.211689}
+[0m08:28:18.137615 [debug] [MainThread]: Command `dbt test` succeeded at 08:28:18.137538 after 4.26 seconds
+[0m08:28:18.138374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff800ff320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81c9d010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7e37fb00>]}
+[0m08:28:18.138851 [debug] [MainThread]: Flushing usage events
+[0m08:28:18.479224 [debug] [MainThread]: An error was encountered while trying to flush usage events

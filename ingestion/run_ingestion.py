@@ -1,16 +1,15 @@
-"""Ingestion package for New Tools Radar."""
+"""Local script: run from repo root with PYTHONPATH=."""
 
-from hackernews import fetch_hackernews_tools
-from github import fetch_github_tools
-from product_hunt import fetch_product_hunt_tools
-from utils import load_to_supabase, normalize_records as normalize_records_batch, setup_logging
+from ingestion.hackernews import fetch_hackernews_tools
+from ingestion.utils import load_to_supabase, normalize_records, setup_logging
 
 
+def main() -> None:
+    setup_logging()
+    records = normalize_records(fetch_hackernews_tools(5))
+    load_to_supabase(records)
+    print("loaded", len(records))
 
-setup_logging()
 
-r = normalize_records_batch(fetch_hackernews_tools(5))
-
-load_to_supabase(r)
-print('loaded', len(r))
-
+if __name__ == "__main__":
+    main()

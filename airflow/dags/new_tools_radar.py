@@ -84,14 +84,21 @@ with DAG(
         python_callable=_load_to_supabase,
     )
 
+    # BashOperator defaults to append_env=False: a custom `env` would *replace* the process
+    # environment, dropping PATH and all SUPABASE_DB_* from Docker `env_file`. dbt would fail.
     dbt_run = BashOperator(
         task_id="run_dbt",
         cwd="/opt/project/dbt",
+        append_env=True,
         env={
-            "SUPABASE_DB_URL": os.getenv("SUPABASE_DB_URL", ""),
             "DBT_PROFILES_DIR": "/opt/project/dbt",
         },
-        bash_command="dbt deps && dbt run --profiles-dir /opt/project/dbt --target dev && dbt test --profiles-dir /opt/project/dbt --target dev",
+        bash_command=(
+            "set -euo pipefail && "
+            "dbt deps && "
+            "dbt run --profiles-dir /opt/project/dbt --target dev && "
+            "dbt test --profiles-dir /opt/project/dbt --target dev"
+        ),
     )
 
     fetch_sources >> normalize_records_task >> load_raw_tools >> dbt_run

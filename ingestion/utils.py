@@ -18,7 +18,7 @@ LOGGER = logging.getLogger(__name__)
 
 
 def _load_local_dotenv() -> None:
-    """Load new-tools-radar/.env when running outside Docker so os.getenv sees values."""
+    """Load repo-root `.env` when running outside Docker so os.getenv sees values."""
     try:
         from dotenv import load_dotenv
     except ImportError:

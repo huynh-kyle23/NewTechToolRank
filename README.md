@@ -46,16 +46,19 @@ Product Hunt API        Hacker News API          GitHub API
 ## Folder Structure
 
 ```text
-new-tools-radar/
+NewTechToolRank/
 ├── airflow/
 │   ├── dags/
 │   │   └── new_tools_radar.py
+│   ├── Dockerfile
 │   ├── docker-compose.yml
 │   └── requirements.txt
 ├── ingestion/
+│   ├── __init__.py
 │   ├── github.py
 │   ├── hackernews.py
 │   ├── product_hunt.py
+│   ├── run_ingestion.py
 │   └── utils.py
 ├── dbt/
 │   ├── dbt_project.yml
@@ -70,6 +73,7 @@ new-tools-radar/
 │       └── schema.yml
 ├── supabase/
 │   └── schema.sql
+├── .env
 ├── .env.example
 └── README.md
 ```
@@ -124,6 +128,47 @@ Or from Airflow CLI container:
 ```bash
 docker compose exec scheduler airflow dags trigger new_tools_radar
 ```
+
+## Run The Whole Pipeline Again
+
+Use this section whenever you want to re-run everything end-to-end after code or env changes.
+
+### Quick re-run (most common)
+
+```bash
+cd airflow
+docker compose up -d
+docker compose exec scheduler airflow dags trigger new_tools_radar
+```
+
+Then in Airflow UI (`http://localhost:8080`):
+1. Open DAG `new_tools_radar`.
+2. Confirm all tasks go green (`fetch_sources`, `normalize_records`, `load_raw_tools`, `run_dbt`).
+3. If a task is yellow (`up_for_retry`), open task logs and fix the root error.
+
+### Re-run after changing dependencies / Dockerfile / requirements
+
+```bash
+cd airflow
+docker compose down
+docker compose build --no-cache
+docker compose up airflow-init
+docker compose up -d
+docker compose exec scheduler airflow dags trigger new_tools_radar
+```
+
+### Full local reset (only if you want a clean Airflow metadata DB)
+
+```bash
+cd airflow
+docker compose down -v
+docker compose build --no-cache
+docker compose up airflow-init
+docker compose up -d
+docker compose exec scheduler airflow dags trigger new_tools_radar
+```
+
+`down -v` deletes Docker volumes for local Airflow metadata. It does **not** delete your Supabase tables.
 
 ## dbt Models
 
