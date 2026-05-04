@@ -4,3 +4,4 @@ __pycache__/
 .DS_Store
 dbt/target/
 dbt/logs/
+ingestion/__pycache__/utils.cpython-312.pyc
