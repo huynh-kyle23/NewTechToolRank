@@ -1,7 +1,8 @@
-version: "3.8"
-
 x-airflow-common: &airflow-common
-  image: apache/airflow:2.9.1
+  build:
+    context: .
+    dockerfile: Dockerfile
+  image: newtechtoolrank-airflow:2.9.1
   env_file:
     - ../.env
   environment:

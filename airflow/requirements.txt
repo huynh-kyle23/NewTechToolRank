@@ -1,6 +1,7 @@
-apache-airflow-providers-postgres
-dbt-core
-dbt-postgres
+# Pin dbt so pip does not backtrack through ancient releases (0.13/0.14) against Airflow’s deps.
+# Do not install apache-airflow-* here — the image already ships Airflow; extra providers explode the resolver.
+dbt-core==1.11.8
+dbt-postgres==1.10.0
 psycopg2-binary
 python-dotenv
 requests

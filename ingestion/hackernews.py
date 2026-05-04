@@ -5,7 +5,7 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from typing import Any, Dict, List
 
-from ingestion.utils import LOGGER, get_retry_session
+from utils import LOGGER, get_retry_session
 
 
 HN_BASE_URL = "https://hacker-news.firebaseio.com/v0"
