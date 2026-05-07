@@ -1,9 +1,13 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import DataIcon from '@/components/data-icon.5c082963.svg';
 
 export const metadata: Metadata = {
   title: 'New Tools Radar',
-  description: 'Next.js + VisActor dashboard for emerging data tools'
+  description: 'Next.js + VisActor dashboard for emerging data tools',
+  icons: {
+    icon: DataIcon.src
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
