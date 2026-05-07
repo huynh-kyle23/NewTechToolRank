@@ -88,10 +88,9 @@ NewTechToolRank/
 │   ├── lib/
 │   │   ├── supabase.ts
 │   │   └── types.ts
-│   ├── .env.example
 │   └── package.json
+│   └── .env.local
 ├── .env
-├── .env.example
 └── README.md
 ```
 
