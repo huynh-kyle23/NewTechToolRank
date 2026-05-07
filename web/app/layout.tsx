@@ -4,7 +4,7 @@ import DataIcon from '@/components/data-icon.5c082963.svg';
 
 export const metadata: Metadata = {
   title: 'New Tools Radar',
-  description: 'Next.js + VisActor dashboard for emerging data tools',
+  description: 'Dashboard for emerging data tools',
   icons: {
     icon: DataIcon.src
   }
