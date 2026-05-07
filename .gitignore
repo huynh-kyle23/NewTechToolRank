@@ -4,4 +4,11 @@ __pycache__/
 .DS_Store
 dbt/target/
 dbt/logs/
-ingestion/__pycache__/utils.cpython-312.pyc
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Next.js web dashboard
+web/node_modules/
+web/.next/
+web/.env.local

@@ -75,6 +75,21 @@ NewTechToolRank/
 │       └── schema.yml
 ├── supabase/
 │   └── schema.sql
+├── web/
+│   ├── app/
+│   │   ├── api/tools/route.ts
+│   │   ├── api/suggestions/route.ts
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   └── suggestions/page.tsx
+│   ├── components/
+│   │   └── ToolCharts.tsx
+│   ├── lib/
+│   │   ├── supabase.ts
+│   │   └── types.ts
+│   ├── .env.example
+│   └── package.json
 ├── .env
 ├── .env.example
 └── README.md
@@ -119,7 +134,36 @@ Access Airflow at [http://localhost:8080](http://localhost:8080)
 - username: `admin`
 - password: `admin`
 
-### 5) Trigger DAG
+### 5) Next.js dashboard (shadcn/ui + shadcn charts)
+
+This UI replaces the Streamlit dashboard with a Next.js app using shadcn-style UI components and Recharts-based shadcn chart patterns.
+It reads from `public.int_tools_clean` via a server API route (`web/app/api/tools/route.ts`) using Supabase JS.
+
+Set web env vars in `web/.env.local` (copy from `web/.env.example`):
+
+```bash
+cd /Users/kylehuynh/Desktop/NewTechToolRank/web
+cp .env.example .env.local
+```
+
+Required:
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
+- optional `SUPABASE_SERVICE_ROLE_KEY` (recommended for unrestricted server-side reads)
+- `ADMIN_EMAILS` (comma-separated emails allowed to access `/admin/responses`)
+
+Run locally:
+
+```bash
+cd /Users/kylehuynh/Desktop/NewTechToolRank/web
+npm install
+npm run dev
+```
+
+Then open [http://localhost:3000](http://localhost:3000).
+Use filters to explore data tools, and charts to view domain/category mix.
+
+### 6) Trigger DAG
 
 From Airflow UI:
 1. Open DAG `new_tools_radar`
@@ -131,6 +175,26 @@ Or from Airflow CLI container:
 ```bash
 docker compose exec scheduler airflow dags trigger new_tools_radar
 ```
+
+### 7) Login + suggestions + admin responses
+
+Enable Google auth in Supabase first:
+1. In Supabase dashboard, go to **Authentication -> Providers -> Google**.
+2. Enable Google and add your Google OAuth client ID/secret.
+3. Add allowed redirect URL: `http://localhost:3000` (and your production app URL later).
+
+Open [http://localhost:3000/suggestions](http://localhost:3000/suggestions) and submit the form.
+Users must be logged in with Google before submission is allowed.
+The API derives submitter name/email from the authenticated user and inserts into `public.tool_suggestions` through `web/app/api/suggestions/route.ts`.
+
+Use the top-right **SIGN IN WITH GOOGLE** button in the app header to authenticate.
+
+Admin-only responses page:
+- Add allowed admin emails to `ADMIN_EMAILS` in `web/.env.local`.
+- Open [http://localhost:3000/admin/responses](http://localhost:3000/admin/responses).
+- Access is enforced by API checks against the admin allowlist.
+
+If this is your first run, apply `supabase/schema.sql` so the `tool_suggestions` table exists.
 
 ## Run The Whole Pipeline Again
 
@@ -223,6 +287,27 @@ from public.fct_tool_intel_daily
 where pull_date = (select max(data_pulled_date) from public.int_tools_clean)
 order by tools_count desc;
 ```
+
+## Score Calculation
+
+`score` is source-native (not normalized across sources). Ingestion maps:
+
+- `product_hunt` -> Product Hunt `votesCount`
+- `hackernews` -> Hacker News story `score`
+- `github` -> GitHub repo `stargazers_count`
+
+This means score magnitudes are not directly comparable between sources.
+For cross-source ranking, add a normalized dbt metric (for example source-level percentile rank or z-score).
+
+## Momentum Calculation
+
+`momentum_label` is assigned in `int_tools_clean.sql` from score thresholds:
+
+- `hot`: `score >= 500`
+- `rising`: `score >= 100 and < 500`
+- `new`: `score < 100`
+
+This momentum logic is applied uniformly to all rows regardless of source or `data_practice_category`.
 
 ## Free-Tier Compatibility Notes
 
