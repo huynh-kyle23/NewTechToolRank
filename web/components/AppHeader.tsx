@@ -10,6 +10,7 @@ export default function AppHeader() {
   const [loading, setLoading] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
+  const [isSigningOut, setIsSigningOut] = useState(false);
 
   useEffect(() => {
     const supabase = getSupabaseBrowserClient();
@@ -39,7 +40,11 @@ export default function AppHeader() {
     };
 
     syncState();
-    const { data: listener } = supabase.auth.onAuthStateChange(async () => {
+    const { data: listener } = supabase.auth.onAuthStateChange(async (event) => {
+      if (event === 'SIGNED_OUT') {
+        setIsAuthenticated(false);
+        setIsAdmin(false);
+      }
       await syncState();
     });
 
@@ -59,9 +64,18 @@ export default function AppHeader() {
 
   async function handleHeaderSignOut() {
     const supabase = getSupabaseBrowserClient();
-    await supabase.auth.signOut();
-    setIsAuthenticated(false);
-    setIsAdmin(false);
+    setIsSigningOut(true);
+    try {
+      const { error } = await supabase.auth.signOut({ scope: 'local' });
+      if (error) throw error;
+    } catch (error) {
+      console.error('Sign out failed:', error);
+    } finally {
+      setIsAuthenticated(false);
+      setIsAdmin(false);
+      window.location.assign('/');
+      setIsSigningOut(false);
+    }
   }
 
   return (
@@ -94,9 +108,10 @@ export default function AppHeader() {
             <button
               type="button"
               onClick={handleHeaderSignOut}
+              disabled={isSigningOut}
               className="ml-2 rounded-full border border-white/70 px-5 py-2 text-xs font-semibold tracking-wide text-white transition hover:bg-white/10"
             >
-              LOG OUT
+              {isSigningOut ? 'LOGGING OUT...' : 'LOG OUT'}
             </button>
           ) : null}
           {isAuthenticated && isAdmin ? (
